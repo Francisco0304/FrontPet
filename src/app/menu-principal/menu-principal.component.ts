@@ -20,4 +20,11 @@ export class MenuPrincipalComponent {
     this.router.navigate(['/menu-mascotas']);
   }
 
+  navigateToBasicMedicine() {
+    this.router.navigate(['/menu-medicina']);
+  }
+
+  navigateToHistorial() {
+    this.router.navigate(['/menu-historial']);
+  }
 }

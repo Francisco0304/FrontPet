@@ -44,6 +44,10 @@
           <h5 class="card-title">Registrar Mascota</h5>
           <form (ngSubmit)="onSubmit()">
             <div class="form-group">
+              <label for="petName">Identificacion</label>
+              <input type="text" class="form-control" id="petID" [(ngModel)]="pet.identificacion" name="petID" required>
+            </div>
+            <div class="form-group">
               <label for="petName">Nombre</label>
               <input type="text" class="form-control" id="petName" [(ngModel)]="pet.nombre" name="nombre" required>
             </div>
@@ -61,10 +65,17 @@
               <label for="petBirthDate">Fecha de Nacimiento</label>
               <input type="date" class="form-control" id="petBirthDate" [(ngModel)]="pet.fechaNacimiento" name="fechaNacimiento" required>
             </div>
+            <div class="form-group">
+              <label for="duenoCedula">Cédula del Dueño</label>
+              <select class="form-control" id="duenoCedula" [(ngModel)]="pet.cedulaDueno" name="cedulaDueno" required>
+                <option *ngFor="let dueno of duenos" [value]="dueno.cedula">{{ dueno.cedula }} - {{ dueno.nombre }}</option>
+              </select>
+            </div>
             <button type="submit" class="btn btn-primary">Registrar</button>
           </form>
         </div>
       </div>
     </div>
   </div>
+</div>
 </div>
