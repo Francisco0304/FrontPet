@@ -27,4 +27,8 @@ export class MenuPrincipalComponent {
   navigateToHistorial() {
     this.router.navigate(['/menu-historial']);
   }
+
+  navigateToUrgencias() {
+    this.router.navigate(['/menu-prioritario']);
+  }
 }
